@@ -1,0 +1,9 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/other"],
+  "locationName" : ["", "AP Government", "Other"],
+  "fileNames" : ["Brutus I", "Birmingham Jail"],
+  "filePaths" : ["s/brutus_1", "s/birmingham_jail"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": ""
+}

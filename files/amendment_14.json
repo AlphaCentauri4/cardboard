@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/amendment_14"],
+  "locationName" : ["", "AP Government", "Court Cases", "Amendment 14"],
+  "title" : "Amendment 14",
+  "summary" : "Privelages and immunities of Constitution extend to states",
+  "content" : ["The Incorporation Doctrine extends the Bill of Rights to the states", "The [Due Process Clause] states the government must follow a procedure as prescribed by law in order to deprive someone of life, liberty, or property", "The [Equal Protection Clause] requires that laws provide equal protection to all people"]
+}

@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/federalist_51"],
+  "locationName" : ["", "AP Government", "Court Cases", "Federalist 51"],
+  "title" : "Federalist 51",
+  "summary" : "Argued for the [seperation of powers] between the Executive, Legislative, and Judicial branches",
+  "content" : ["[Seperation of powers] is a Constitutional doctrine which states that the branches of the federal government (executive, legislative, judicial) are seperate", "Seperation of powers establishes a system of [checks and balances], where each branch has its own powers to limit the powers of the other branches"]
+}

@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/gideon_v_wainwright"],
+  "locationName" : ["", "AP Government", "Court Cases", "Gideon v. Wainwright"],
+  "title" : "Gideon v. Wainwright",
+  "summary" : "Established the guarantee of an attorney regardless of financial situation",
+  "content" : ["{Principle/Clause}", "Right to Counsel (6th amendment)"]
+}

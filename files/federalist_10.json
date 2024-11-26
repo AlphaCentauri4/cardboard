@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/federalist_10"],
+  "locationName" : ["", "AP Government", "Court Cases", "Federalist 10"],
+  "title" : "Federalist 10",
+  "summary" : "Demonstrates that the Constitution supresses the power of [factions] to maintain an effective government",
+  "content" : ["[Factions] are groups of people that share a common interest (known today as [interest groups])", "Argued that a larger republic can better supress factional power"]
+}

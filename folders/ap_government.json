@@ -1,0 +1,10 @@
+{
+  "locationPath" : ["f/home", "f/ap_government"],
+  "locationName" : ["", "AP Government"],
+  "fileNames" : ["Court Cases", "Federalist Papers", "Constitution", "Found. Docs."],
+  "filePaths" : ["f/court_cases", "f/federalist_papers", "f/constitution", "f/foundational_documents", "f/other"],
+  "fileAccents" : ["invert(12%) sepia(79%) saturate(6852%) hue-rotate(359deg) brightness(97%) contrast(93%);", "invert(51%) sepia(73%) saturate(3361%) hue-rotate(341deg) brightness(96%) contrast(92%)", "invert(24%) sepia(94%) saturate(889%) hue-rotate(354deg) brightness(97%) contrast(95%);", "invert(72%) sepia(85%) saturate(485%) hue-rotate(4deg) brightness(108%) contrast(107%);", ""],
+  "fileShape": ["simple"],
+  "vocabularyTerms" : ["writ of mandamus"],
+  "vocabularyDefinitions" : ["Insert definition"]
+}

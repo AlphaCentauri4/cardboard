@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/roe_v_wade"],
+  "locationName" : ["", "AP Government", "Court Cases", "Roe v. Wade"],
+  "title" : "Roe v. Wade",
+  "summary" : "Protects right to an abortion",
+  "content" : ["{Principle/Clause}", "[Due Process Clause] (14th amendment)", "Implied right to privacy (9th amendment)"]
+}

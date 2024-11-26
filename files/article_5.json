@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/article_5"],
+  "locationName" : ["", "AP Government", "Court Cases", "Article V"],
+  "title" : "Article V",
+  "summary" : "Established procedure of adding amendments",
+  "content" : ["Ways to propose amendment:", "2/3 vote in House and Senate", "2/3 of states vote in to propose", "Ways to ratify amendment:", "3/4 of state legislatures", "3/4 of conventions called by state to ratify amendment"]
+}

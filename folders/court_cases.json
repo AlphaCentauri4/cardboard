@@ -1,0 +1,9 @@
+{ 
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases"],
+  "locationName" : ["", "AP Government", "Court Cases"],
+  "fileNames" : ["Marbury v. Madison", "McCulloch v. Maryland", "Schenck v. US", "Brown v. Board of Education", "Engel v. Vitale", "Baker v. Carr", "Gideon v. Wainwright", "Tinker v. Des Moines", "New York Times v. US", "Wisconsin v. Yoder",  "Roe v. Wade",  "Shaw v. Reno", "United States v. Lopez", "McDonald v. Chicago", "Citizens United v. Federal Election Commission"],
+  "filePaths" : ["s/marbury_v_madison", "s/mcCulloch_v_maryland", "s/schenck_v_us", "s/brown_v_boardofeducation", "s/engel_v_vitale", "s/baker_v_carr", "s/gideon_v_wainwright", "s/tinker_v_desmoines", "s/newyorktimes_v_unitedstates", "s/wisconsin_v_yoder",  "s/roe_v_wade",  "s/shaw_v_reno", "s/unitedstates_v_lopez", "s/mcDonald_v_chicago", "s/citizensunited_v_federalelectioncommission"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": "The 15 required court cases for the AP Government Exam "
+}

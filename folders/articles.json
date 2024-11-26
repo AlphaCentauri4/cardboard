@@ -1,0 +1,9 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/constitution", "f/articles"],
+  "locationName" : ["", "AP Government", "Constitution", "Amendments"],
+  "fileNames" : ["Article I", "Article II", "Article III", "Article IV", "Article V", "Article VI", "Article VII"],
+  "filePaths" : ["s/article_1", "s/article_2", "s/article_3", "s/article_4", "s/article_5", "s/article_6", "s/article_7"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": "The Constitution has 7 articles each describing the functionality of a part of the United States government."
+}

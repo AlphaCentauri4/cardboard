@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cardboard</title>
+    <link rel="icon" href="/system/cardboardFlame.png">
+    <link href="study.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+<!-- <div id="screenHider"></div>
+<div id="backDIV">
+  <img id="backIMG" src="system/leftArrow.svg">
+  <p id="backText">Back</p>
+</div> -->
+<div id="defineDIV">
+  <img id="defineIMG" src="system/book.svg">
+  <h2 id="defineHeader">Dictionary</h2>
+  <p id="defineWord">Error</p>
+  <p id="defineText">A problem occured</p>
+</div>
+<div id="rightBar"></div>
+
+<div id="header">
+  <div id="loadbar"></div>
+  <div id="cardboardDIV">
+  <img src="/system/cardboardFlame.png" id="cardboardLogo">
+  <h3 id="cardboardName">CardBoard</h3>
+</div>
+<div id="leftNavDIV">
+  <img src="system/backArrow.svg" class="navButton" onclick="filePathBack()">
+  <img src="system/home.svg" class="navButton" onclick="filePathStart(['f/home'], true, 'view')">
+  <div id="navPath">
+  </div>
+</div>
+<!-- <div id="rightNavDIV">
+  <div class="modeButtonDIV" onclick="modeManager(0)">
+    <img src="system/list.svg" class="modeButton">
+    <p class="modeText">View</p>
+  </div>
+  <div class="modeButtonDIV" onclick="modeManager(1)">
+    <img src="system/study.svg" class="modeButton">
+    <p class="modeText">Study</p>
+  </div>
+  <div class="modeDropdownDIV">
+      <div id="dropdownSlider"></div>
+        <div class="dropdownElmt" onclick="modeManager(1, 0)">
+          <img class="dropdownImg" src="system/abc.svg">
+          <p class="dropdownText">Term</p>
+        </div>
+        <div class="dropdownElmt" onclick="modeManager(1, 1)">
+          <img class="dropdownImg" src="system/numList.svg">
+          <p class="dropdownText">Content</p>
+        </div>
+    </div>
+</div> -->
+<!--   <div id="hiderBackground"></div> -->
+  <div id="rightNavDIV">
+  <div class="modeButtonDIV" onclick="modeManager(0, 0)">
+    <img src="system/eye.svg" class="modeButton">
+    <p class="modeText">View</p>
+  </div>
+  <div class="modeButtonDIV" id="studyButton" onclick="modeManager(1, 0)">
+    <img src="system/study.svg" class="modeButton">
+    <p class="modeText">Study</p>
+  </div>
+  <div class="modeDropdownDIV">
+      <div id="dropdownSlider"></div>
+        <div class="dropdownElmt" onclick="modeManager(0, 0)">
+          <img class="dropdownImg" src="system/list.svg">
+          <p class="dropdownText">List</p>
+        </div>
+        <div class="dropdownElmt" onclick="modeManager(0, 1)">
+          <img class="dropdownImg" src="system/cards.svg">
+          <p class="dropdownText">InfoCards</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="viewPort">
+<!--   <div class="viewModeContainer"> -->
+<!--   <div class="starContainer">
+    <img src="system/fullStar.svg" class="starButton">
+  </div> -->
+<!--   <div class="termContainer">
+    <h2 class="termText">Federalist 10</h2>
+  </div>
+  <div class="summaryContainer">
+    <p class="summaryText">uiwbgrlkbesjgskdbgjkdsfgbjksdfgbjksdfgbjdskfgbksjdfgb</p>
+  </div>
+  <div class="contentContainer">
+    <p class="contentText">kjaegbjksegbkjsdfgbjksdgbjksdfgbkjsdgbkjsdbgfkjsdgfbkjsdgfbkjsdh<br>llejgebrskjbgktsjgtbkjdgfbsjdkgfbdgfb<br>leiurgbsltrbgldjgbkdjgbskjgb</p>
+  </div>
+</div> -->
+  
+</div>
+<div id="progressBarDIV">
+  <div id="progressBar"></div>
+  <div id="progressFinish"></div>
+</div>
+<div id="slideNumDIV">
+  <div id="backSlide" onclick="slideManager('back')">
+    <div id="backSlideBackground"></div>
+    <img class="slideIMG" src="system/leftArrow.svg">
+  </div>
+  <div id="slideNum"></div>
+  <div id="nextSlide" onclick="slideManager('next')">
+    <div id="nextSlideBackground"></div>
+    <img class="slideIMG" src="system/rightArrow.svg">
+  </div>
+</div>
+<p id="signature">powered by <b>momentum</b></p>
+    
+<script>
+  window.addEventListener('keydown', function (e) {
+  if (e.key == "ArrowLeft") {
+    slideManager("back")
+  } else if (e.key == "ArrowRight") {
+    slideManager("next")
+  }
+}, false);
+// const animated = document.querySelector("#loadbar");
+// animated.onanimationend = () => {
+// document.getElementById('loadbar').style.animation="endLoad .5s ease-out 1 forwards";};
+var curSlide = 0;
+var maxSlide = 0;
+window.onresize = changeNavWidth;
+var prevPaths = ["f/home"];
+function modeManager(mode, submode, redirect = true) {
+for (i=0; i<2; i++) {
+  document.getElementsByClassName("modeButtonDIV")[i].style.backgroundColor = "white";
+  document.getElementsByClassName("modeButton")[i].style.filter = "invert(28%) sepia(2%) saturate(12%) hue-rotate(314deg) brightness(97%) contrast(91%)";
+  document.getElementsByClassName("modeText")[i].style.color= "#646464";
+}
+for (i=0; i<2; i++) {
+  document.getElementsByClassName("dropdownElmt")[i].style.backgroundColor = "white";
+  document.getElementsByClassName("dropdownImg")[i].style.filter = "invert(28%) sepia(2%) saturate(12%) hue-rotate(314deg) brightness(97%) contrast(91%)";
+  document.getElementsByClassName("dropdownText")[i].style.color= "#646464";
+}
+  document.getElementsByClassName("modeButtonDIV")[mode].style.backgroundColor = "#e5f5ff";
+  document.getElementsByClassName("modeButton")[mode].style.filter = "invert(17%) sepia(43%) saturate(5696%) hue-rotate(212deg) brightness(90%) contrast(92%)";
+  document.getElementsByClassName("modeText")[mode].style.color = "#0a49a8";
+  document.getElementsByClassName("dropdownElmt")[submode].style.backgroundColor = "#e5f5ff";
+  document.getElementsByClassName("dropdownImg")[submode].style.filter = "invert(17%) sepia(43%) saturate(5696%) hue-rotate(212deg) brightness(90%) contrast(92%)";
+  document.getElementsByClassName("dropdownText")[submode].style.color = "#0a49a8";
+  document.getElementById("dropdownSlider").style.top = (6 + 32*submode) + "px";
+  var locationList = [["viewList.html", "viewCards.html"]];
+  console.log(true)
+  if (redirect == true){
+    console.log(locationList[mode][submode])
+  window.open("https://1-cardboard.alphacentauri4.repl.co/" + locationList[mode][submode], "_self")
+  }
+}
+
+function slideManager(operation) {
+  if (operation == "next" && curSlide + 1 < maxSlide) {
+    curSlide += 1;
+    var pagePath = sessionStorage.getItem("pagePath");
+  filePathStart([sessionStorage.getItem("pagePath")], true, "", false)
+  } else if (operation == "back" && curSlide - 1 >= 0) {
+    curSlide -= 1;
+    var pagePath = sessionStorage.getItem("pagePath");
+  filePathStart([sessionStorage.getItem("pagePath")], true, "", false)
+  }
+  if (curSlide == maxSlide - 1) {
+    document.getElementById("progressFinish").style.backgroundColor = " #0870f7";
+  } else {
+    document.getElementById("progressFinish").style.backgroundColor = "#dcdcdc";
+  }
+  document.getElementById("progressBar").style.width = (curSlide + 1) / maxSlide * 100 + "%"; 
+  document.getElementById("slideNum").innerHTML = curSlide + 1;
+}
+  
+function changeNavWidth() {
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  console.log(height);
+  console.log("true");
+  document.getElementById("leftNavDIV").style.width = (width - 240) + "px";
+  document.getElementById("viewPort").style.width = (width - 15) + "px";
+  document.getElementById("viewPort").style.height = (height - 100) + "px";
+}
+
+function loadJSON(path, success, error) {
+  scroll();
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // console.log("Success");
+        success(JSON.parse(xhr.responseText));
+      }
+      else {
+        error(xhr);
+      }
+    }
+  };
+timer1 = setTimeout(onSlow, 10000);
+timer2 = setTimeout(onFail, 20000);
+xhr.open('GET', "https://1-cardboard.alphacentauri4.repl.co" + path, false);
+xhr.send();
+}
+
+function startLoadAnimation() {
+  document.getElementById('loadbar').style.animation="loading 1.5s linear 1";
+  if (loadState == false) {
+    stopLoadAnimation(true)
+  } else {
+  setTimeout(startLoadAnimation, 1000);
+  loadState = true;
+  console.log("Loop started")
+  }
+  
+}
+function stopLoadAnimation(action) {
+  if (action) {
+  document.getElementById('loadbar').style.animation = "loading 0s linear 0"; 
+  document.getElementById('loadbar').style.animation="endLoad .5s ease-out 1 forwards";
+  document.getElementById('loadbar').style.backgroundColor="#1f598e";
+  console.log("Load ended")} else {
+    loadState = false
+  }
+  
+}
+
+function onLoad(data){
+  clearTimeout(timer1)
+  clearTimeout(timer2)
+  stopLoadAnimation();
+  filePathManager(data);
+
+}
+
+function onSlow() {
+  // document.getElementById('loadbar').style.backgroundColor="#f07941";
+//#eb5610
+}
+
+function onFail() {
+}
+
+// function modeManager(mode, redirect = true) {
+// for (i=0; i<2; i++) {
+//   document.getElementsByClassName("modeButtonDIV")[i].style.backgroundColor = "white";
+//   document.getElementsByClassName("modeButton")[i].style.filter = "invert(28%) sepia(2%) saturate(12%) hue-rotate(314deg) brightness(97%) contrast(91%)";
+//   document.getElementsByClassName("modeText")[i].style.color= "#646464";
+
+// }
+//   document.getElementsByClassName("modeButtonDIV")[mode].style.backgroundColor = "#e5f5ff";
+//   document.getElementsByClassName("modeButton")[mode].style.filter = "invert(17%) sepia(43%) saturate(5696%) hue-rotate(212deg) brightness(90%) contrast(92%)";
+//   document.getElementsByClassName("modeText")[mode].style.color = "#0a49a8";
+//   var locationList = ["index.html", "study.html"];
+//   if (redirect){
+//   window.open("https://1-cardboard.alphacentauri4.repl.co/" + locationList[mode], "_self")
+//   }
+// }
+
+// function fileDisplayManager(destination) {
+//   filePathDisplayManager(destination);
+//   loadJSON()
+// }
+
+// function filePathDisplayManager(destination) {
+//   document.getElementById("navPath").innerHTML = "";
+//   for (i=0; i<destination.length; i++) {
+//     document.getElementById("navPath").innerHTML += '<p class="navPathLocation">AP Government</p><p class="navPathLocation">›</p>'
+//   }
+// }
+
+function filePathManager(path) {
+  console.log(path);
+  loadState = true;
+  startLoadAnimation()
+  
+  // console.log(path)
+  var locationName = path.locationName;
+  var locationPath = path.locationPath;
+  var fileName = path.fileNames;
+  var filePath = path.filePaths;
+  maxSlide = filePath.length
+  var fileAccents = path.fileAccents;
+  var fileShape = path.fileShape;
+  var fileClips = path.fileClips;
+  // var locationPath = path.locationPath;
+  document.getElementById("navPath").innerHTML = "";
+  for (i=0; i<locationName.length; i++) {
+    document.getElementById("navPath").innerHTML += '<p class="navPathLocation" onclick="filePathStart(' + "['" + locationPath[i]  + "']" + ', true,' + "'view'" + ')">' + locationName[i] + '</p><p class="navPathLocation">›</p>'
+  }
+  console.log("Filepathi: " + curSlide)
+  loadJSON("/files/" + filePath[curSlide].slice(2, filePath[curSlide].length) + ".json", displayFile, onFail);
+}
+
+
+function displayFile(json) {
+  console.log("Hello")
+  console.log(json)
+  var fileName = json.locationPath;
+  var title = json.title;
+  var image = json.image;
+  var summary = json.summary;
+  var content = json.content;
+  var define = json.define;
+  var bullets = "<ul>";
+  for (j=0; j<content.length; j++) {
+    console.log("loop")
+    bullets += "<li>" + content[j] + "</li>";
+  }
+  bullets += "</ul>"
+  // console.log(bullets)
+  // console.log(content.length)
+  bullets = insertDefinitions(bullets)
+  summary = insertDefinitions(summary)
+  document.getElementById("viewPort").innerHTML = '<div class="viewModeContainer"><div class="termContainer"><h2 class="termText">' + title + '</h2></div><div class="summaryContainer"><p class="summaryText">' + summary + '</p></div><div class="contentContainer"><div class="contentText">' + 
+bullets +'</div></div><div class="dividerLine"></div>';
+  slideManager()
+  stopLoadAnimation();
+}
+  
+function define(word, event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  console.log(x)
+  console.log(y)
+  document.getElementById("defineDIV").style.top = (y - 150 + window.scrollY) + "px";
+  document.getElementById("defineDIV").style.left = (x - 100 + window.scrollX) + "px";
+  document.getElementById("defineDIV").style.animation = "defineIn .5s ease 1 forwards";
+  // loadJSON("https://1-cardboard.alphacentauri4.repl.co/files/vocabulary.json", fillDefinition, onFail);
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // console.log("Success");
+        fillDefinition(word, JSON.parse(xhr.responseText));
+      }
+      else {
+        onFail(xhr);
+      }
+    }
+  };
+xhr.open('GET', "https://1-cardboard.alphacentauri4.repl.co/files/vocabulary.json", false);
+xhr.send();
+}
+
+function fillDefinition(word, json) {
+  var element = [word.toLowerCase()][0];
+  // console.log(json.element)
+  // console.log(element)
+  // console.log(json)
+  document.getElementById("defineWord").innerHTML = word;
+  document.getElementById("defineText").innerHTML = json[element];
+}
+
+function defineNone() {
+  console.log("exit")
+    document.getElementById("defineDIV").style.animation = "defineOut .5s 0s ease 1 forwards";
+}
+  
+function insertDefinitions(bullets) {
+  var word = "";
+  var markLetter = false;
+  for (k=0; k<bullets.length; k++) {
+    if (bullets[k] == "[") {
+      markLetter = true;
+    } else if (bullets[k] == "]") {
+      markLetter = false;
+      bullets = bullets.replace("[", "<span class='define' onmouseover='define(\"" + word + "\", event)' onmouseout='defineNone()'>");
+  bullets = bullets.replace("]", "</span>")
+      word = "";
+    } else if (markLetter) {
+      word += bullets[k];
+    }
+  }
+  bullets = bullets.replace(/\{/g, "<b class='bold'>")
+  bullets = bullets.replace(/\}/g, "</b>")
+  return bullets;
+}
+ 
+  
+function filePathBack() {
+  prevPaths.pop();
+  if (prevPaths.length < 1) {return}
+  var tempArray = [];
+  tempArray.push(prevPaths[prevPaths.length - 1])
+  filePathStart(tempArray, false)
+  window.open("https://1-cardboard.alphacentauri4.repl.co/", "_self")
+}
+
+function filePathStart(path, record = true, changePage, load) {
+  sessionStorage.setItem("pagePath", path)
+  if (changePage == "view") {
+    window.open("https://1-cardboard.alphacentauri4.repl.co/", "_self")
+  }
+  // modeManager(1, false)
+  // console.log("Entered")
+  console.log(path)
+  var lastLocation = path[0];
+  console.log("Last location: " + lastLocation)
+  if (record == true) {
+  prevPaths.push(lastLocation)}
+  // console.log(lastLocation)
+  var type = lastLocation[0]
+  var prefix = "/";
+  var suffix = ".json";
+  if (type == "f") {prefix += "folders"}
+  else {prefix += "files"}
+  var modifiedPath = prefix + "/" + lastLocation.slice(2, lastLocation[lastLocation.length]) + suffix;
+  // console.log(modifiedPath)
+  loadJSON(modifiedPath, onLoad, onFail);
+  // console.log("Prevpaths: ")
+  // console.log(prevPaths)
+}
+
+modeManager(0, 1, false)
+var pagePath = sessionStorage.getItem("pagePath");
+if (pagePath != null) {
+  filePathStart([sessionStorage.getItem("pagePath")])
+} 
+else {
+  filePathStart(["f/home"])
+}
+changeNavWidth()
+document.title = "Study - Cardboard";
+
+</script>
+</body>
+</html>

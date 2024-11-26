@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/shaw_v_reno"],
+  "locationName" : ["", "AP Government", "Court Cases", "Shaw v. Reno"],
+  "title" : "Shaw v. Reno",
+  "summary" : "Declared that racial [gerrymandering] is unconstitutional",
+  "content" : ["{Principle/Clause}", "[Equal protection clause] (14th amendment)"]
+}

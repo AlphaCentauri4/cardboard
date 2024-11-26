@@ -1,0 +1,9 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/constitution", "f/bill_of_rights"],
+  "locationName" : ["", "AP Government", "Constitution", "Bill of Rights"],
+  "fileNames" : ["Amendment I", "Amendment II", "Amendment III", "Amendment IV", "Amendment V", "Amendment VI", "Amendment VII", "Amendment VIII", "Amendment IV", "Amendment X"],
+  "filePaths" : ["s/amendment_1", "s/amendment_2", "s/amendment_3", "s/amendment_4", "s/amendment_5", "s/amendment_6", "s/amendment_7", "s/amendment_8", "s/amendment_9", "s/amendment_10"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": "The Bill of Rights consist of the first 10 amendments to the Constitution"
+}

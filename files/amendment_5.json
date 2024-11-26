@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/amendment_5"],
+  "locationName" : ["", "AP Government", "Court Cases", "Amendment V"],
+  "title" : "Amendment V",
+  "summary" : "Declared that people do not have to self incriminate themselves",
+  "content" : ["No self-incrimination", "No [double jeopardy]", "Established [due process]"]
+}

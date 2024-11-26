@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/constitution", "s/article_1"],
+  "locationName" : ["", "AP Government", "Court Cases", "Article I"],
+  "title" : "Article I",
+  "summary" : "Established {legislative} branch",
+  "content" : ["Legislative branch makes laws", "Ability to collect taxes, regulate commerce, establish Rule of Naturalization, coin money, establish post office, declare war, raise/support army", "Bicameral congress, divided into houses (House of Representatives and Senate)", "House of Representatives (members based on state populations; 435 maximum)", "Financial bills orgiginate in the House", "Senate (2 senators per state; 100 total)", "Vice president is head of Senate, with the President Tempore serving as a substitute"]
+}

@@ -1,0 +1,8 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/constitution"],
+  "locationName" : ["", "AP Government", "Constitution"],
+  "fileNames" : ["Articles", "Bill of Rights", "Amendments"],
+  "filePaths" : ["f/articles", "f/bill_of_rights", "f/amendments"],
+  "fileAccents" : ["invert(24%) sepia(94%) saturate(889%) hue-rotate(354deg) brightness(97%) contrast(95%);", "invert(29%) sepia(93%) saturate(1091%) hue-rotate(358deg) brightness(96%) contrast(91%);", "invert(49%) sepia(87%) saturate(3292%) hue-rotate(358deg) brightness(95%) contrast(94%);"],
+  "fileShape": ["simple"]
+}

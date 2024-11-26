@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/article_2"],
+  "locationName" : ["", "AP Government", "Court Cases", "Article II"],
+  "title" : "Article II",
+  "summary" : "Established {executive} branch",
+  "content" : ["The president is head of executive branch with 4 year terms", "President is responsible for carrying out legislation passed by Congress", "Presidential powers: ", "Commander in chief of the armed forces", "Grant reprieves and pardons for federal offenses (except impeachment)", "Receive ambassadors", "Appoint Cabinet officials, White House staff and Supreme Court justices"]
+}

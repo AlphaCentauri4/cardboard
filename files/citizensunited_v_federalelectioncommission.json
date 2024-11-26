@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/citizensunited_v_federalelectioncommission"],
+  "locationName" : ["", "AP Government", "Court Cases", "Citizens United v. FEC"],
+  "title" : "Citizens United v. FEC",
+  "summary" : "Political spending from corporations cannot be limited by the [Federal Election Commission]",
+  "content" : ["{Principle/Clause}", "Free Speech (1st amendment)"]
+}

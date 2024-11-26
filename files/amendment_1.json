@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/amendment_1"],
+  "locationName" : ["", "AP Government", "Court Cases", "Amendment I"],
+  "title" : "Amendment I",
+  "summary" : "Established fundamental freedoms",
+  "content" : ["{Freedoms:}", "Speech", "Press", "Religion", "Assembly", "Petition"]
+}

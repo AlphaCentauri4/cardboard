@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/schenck_v_us"],
+  "locationName" : ["", "AP Government", "Court Cases", "Schenck v. United States"],
+  "title" : "Schenck v. United States",
+  "summary" : "Declared speech that presented a {\"clear and present danger\"} unprotected under the Constitution",
+  "content" : ["{Principle/Clause}", "Freedom of speech (1st amendment)"]
+}

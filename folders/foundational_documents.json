@@ -1,0 +1,9 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/foundational_documents"],
+  "locationName" : ["", "AP Government", "Found. Docs."],
+  "fileNames" : ["Declaration of Ind.", "Articles of Conf."],
+  "filePaths" : ["s/decleration_of_independence", "s/articles_of_confederation"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": "Foundational documents include the Articles of Confederation and the Declaration of Independence"
+}

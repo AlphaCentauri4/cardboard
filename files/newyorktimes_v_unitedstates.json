@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/newyorktimes_v_unitedstates"],
+  "locationName" : ["", "AP Government", "Court Cases", "New York Times v. United States"],
+  "title" : "New York Times v. United States",
+  "summary" : "Strongly limited [prior restraint] (even when concerning national security)",
+  "content" : ["{Principle/Clause}", "[Equal protection clause] (14th amendment)", "Freedom of Press (1st amendment)"]
+}

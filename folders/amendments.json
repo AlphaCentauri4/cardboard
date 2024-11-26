@@ -1,0 +1,9 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/constitution", "f/amendments"],
+  "locationName" : ["", "AP Government", "Constitution", "Amendments"],
+  "fileNames" : ["Amendment 13", "Amendment 14", "Amendment 15", "Amendment 17", "Amendment 19", "Amendment 22", "Amendment 24", "Amendment 26"],
+  "filePaths" : ["s/amendment_13", "s/amendment_14", "s/amendment_15", "s/amendment_17", "s/amendment_19", "s/amendment_22", "s/amendment_24", "s/amendment_26"],
+  "fileShape": ["list", "study", "quiz"],
+  "star" : [""],
+  "description": "There are 8 recommended constitutional amendments outside of the Bill of Rights to learn for the AP exam."
+}

@@ -1,0 +1,7 @@
+{
+  "locationPath" : ["f/home", "f/ap_government", "f/court_cases", "s/marbury_v_madison"],
+  "locationName" : ["", "AP Government", "Court Cases", "Marbury v. Madison"],
+  "title" : "Marbury v. Madison",
+  "summary" : "Established [judicial review] for the Supreme Court",
+  "content" : ["The court decided that it did not have the constitutional power to issue a [writ of mandamus] (to approve Marbury's position).<br><br>", "{Principle/Clause}", "[Judicial review] (Article III)"]
+}
